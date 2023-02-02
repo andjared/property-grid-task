@@ -17,6 +17,11 @@ main {
   height: 100%;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 .container {
   max-width: 100%;
   padding: 4rem 8rem;
@@ -25,10 +30,15 @@ main {
   gap: 2rem;
 }
 
-img {
-  display: block;
+.card .card-img {
+  position: relative;
+}
+
+.card-img img {
   width: 100%;
   aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 0.7rem;
 }
 
 @media screen and (max-width: 1080px) {
