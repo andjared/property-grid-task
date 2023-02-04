@@ -33,6 +33,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  cursor: pointer;
 }
 
 .card .card-img {
@@ -64,6 +65,7 @@ img {
 
 .card-title {
   grid-column: 1 / -1;
+  font-size: inherit;
 }
 
 .card-title,
@@ -97,8 +99,15 @@ img {
 .card-description,
 .card-beds,
 .card-date {
-  line-height: 16px;
+  line-height: 14px;
   color: #717171;
+}
+
+.card-price {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+  gap: 6px;
 }
 
 .card-price .btn-price {
