@@ -7,9 +7,11 @@
 }
 
 body {
-  width: 100%;
+  min-width: 100%;
   min-height: 100vh;
   font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.43;
 }
 
 img {
@@ -18,31 +20,70 @@ img {
 }
 
 .container {
-  padding: 4rem 6rem;
+  height: 100%;
+  padding: 2rem 4rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 1fr;
   row-gap: 1.8rem;
   column-gap: 1.2rem;
+  place-content: center;
+  margin-inline: auto;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.125rem 0.5rem;
 }
 
 .card .card-img {
   height: 100%;
+  width: 100%;
   position: relative;
 }
 
 .card-img img {
-  min-height: 100%;
+  height: 100%;
   width: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 0.7rem;
+  margin-bottom: 0.8rem;
+}
+
+.card-content {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 0.1rem 0.25rem;
+  white-space: nowrap;
+}
+
+.card-content > * {
+  overflow: clip;
+  text-overflow: ellipsis;
+}
+
+.card-title {
+  grid-column: 1 / -1;
+}
+
+.card-review {
+  grid-column: -1 / -1;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+}
+
+.card-beds,
+.card-date {
+  grid-column: 1 / 1;
+}
+
+.card-description,
+.card-price {
+  grid-column: 1 / -1;
 }
 
 @media screen and (max-width: 1240px) {
