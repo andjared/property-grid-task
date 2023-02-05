@@ -17,6 +17,11 @@ img {
   max-width: 100%;
 }
 
+button {
+  outline: 0;
+  cursor: pointer;
+}
+
 .container {
   height: 100%;
   padding: 50px 150px;
@@ -39,7 +44,12 @@ img {
 .card .card-img {
   height: 100%;
   width: 100%;
-  position: relative;
+  display: grid;
+}
+
+.stacked > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 
 .card-img img {
@@ -47,7 +57,16 @@ img {
   width: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 12px;
+}
+
+.btn-save {
+  border: 0;
+  align-self: start;
+  justify-self: end;
+  background-color: transparent;
+  margin: 20px;
+  font-size: 24px;
 }
 
 .card-content {
@@ -108,12 +127,12 @@ img {
   align-items: center;
   margin-top: 6px;
   gap: 6px;
+  overflow: visible;
 }
 
 .card-price .btn-price {
   border: 0;
   background-color: transparent;
-  outline: 0;
   text-decoration: underline;
   color: #717171;
 }
