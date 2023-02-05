@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --clr-grey: #717171;
+  --clr-black: #222222;
+  --clr-white: #ffffff;
+}
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
@@ -79,7 +84,7 @@ button {
   display: block;
   height: 24px;
   width: 24px;
-  stroke: #ffffff;
+  stroke: var(--clr-white);
   fill: rgba(0, 0, 0, 0.5);
   stroke-width: 2;
   overflow: visible;
@@ -88,7 +93,7 @@ button {
 .flag {
   font-size: 14px;
   line-height: 18px;
-  background-color: #ffffff;
+  background-color: var(--clr-white);
   padding: 4px 8px;
   border-radius: 4px;
 }
@@ -103,7 +108,7 @@ button {
 
 .slide-indicators .indicator {
   display: inline-block;
-  background-color: #ffffff;
+  background-color: var(--clr-white);
   border-radius: 50%;
   margin-inline: 2.5px;
   min-height: 6px;
@@ -149,7 +154,7 @@ button {
 .card-title,
 .card-review,
 .card-price .price-night {
-  color: #222222;
+  color: var(--clr-black);
 }
 
 .superhost,
@@ -179,7 +184,7 @@ button {
 .card-beds,
 .card-date {
   line-height: 14px;
-  color: #717171;
+  color: var(--clr-grey);
 }
 
 .card-price {
@@ -194,7 +199,7 @@ button {
   border: 0;
   background-color: transparent;
   text-decoration: underline;
-  color: #717171;
+  color: var(--clr-grey);
 }
 @media screen and (max-width: 1080px) {
   .container {
