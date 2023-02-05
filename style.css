@@ -83,6 +83,38 @@ button {
   border-radius: 4px;
 }
 
+.card-img .slide-indicators {
+  display: flex;
+  justify-content: space-around;
+  align-self: end;
+  justify-self: center;
+  margin-bottom: 12px;
+}
+
+.slide-indicators .indicator {
+  display: inline-block;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin-inline: 2.5px;
+  min-height: 6px;
+  height: 6px;
+  min-width: 6px;
+  width: 6px;
+  opacity: 1;
+}
+
+.slide-indicators :not(:first-child) {
+  opacity: 0.6;
+}
+
+.slide-indicators :nth-last-child(2) {
+  transform: scale(0.833);
+}
+
+.slide-indicators :nth-last-child(1) {
+  transform: scale(0.666);
+}
+
 .card-content {
   display: grid;
   grid-template-columns: 5fr 1fr;
@@ -91,7 +123,9 @@ button {
   white-space: nowrap;
 }
 
-.card-content > * {
+.card-title,
+.card-description,
+.card-price {
   overflow: clip;
   text-overflow: ellipsis;
 }
