@@ -60,13 +60,27 @@ button {
   border-radius: 12px;
 }
 
+.card-img .top-content {
+  align-self: start;
+  padding: 14px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .btn-save {
   border: 0;
-  align-self: start;
-  justify-self: end;
   background-color: transparent;
-  margin: 20px;
   font-size: 24px;
+}
+
+.flag {
+  font-size: 14px;
+  line-height: 18px;
+  background-color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 
 .card-content {
@@ -87,12 +101,14 @@ button {
   font-size: inherit;
 }
 
+.superhost,
 .card-title,
 .card-review,
 .card-price .price-night {
   color: #222222;
 }
 
+.superhost,
 .card-title,
 .price-night .price-value {
   font-weight: 600;
