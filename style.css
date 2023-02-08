@@ -10,6 +10,19 @@
   --clr-grey: #717171;
   --clr-black: #222222;
   --clr-white: #ffffff;
+  --space-unit: 4px;
+  --space-xxs: calc(0.5 * var(--space-unit));
+  --space-xs: calc(1 * var(--space-unit));
+  --space-sm: calc(1.5 * var(--space-unit));
+  --space-sm2: calc(2 * var(--space-unit));
+  --space-md: calc(3 * var(--space-unit));
+  --space-md2: calc(4 * var(--space-unit));
+  --space-lg: calc(5 * var(--space-unit));
+  --space-xl: calc(6 * var(--space-unit));
+  --space-xl2: calc(7 * var(--space-unit));
+  --space-xxl: calc(8 * var(--space-unit));
+  --space-xxl2: calc(9 * var(--space-unit));
+  --space-xxxl: calc(10 * var(--space-unit));
 }
 
 body {
@@ -30,12 +43,12 @@ button {
 
 .container {
   height: 100%;
-  padding: 50px 100px;
+  padding: var(--space-xxl2) var(--space-xxxl);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-auto-rows: 1fr;
-  row-gap: 40px;
-  column-gap: 24px;
+  row-gap: var(--space-xxxl);
+  column-gap: var(--space-xl);
   place-content: center;
   margin-inline: auto;
 }
@@ -43,7 +56,7 @@ button {
 .card {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--space-md);
   cursor: pointer;
 }
 
@@ -68,7 +81,7 @@ button {
 
 .card-img .top-content {
   align-self: start;
-  padding: 14px;
+  padding: var(--space-md);
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -95,7 +108,7 @@ button {
   font-size: 14px;
   line-height: 18px;
   background-color: var(--clr-white);
-  padding: 4px 8px;
+  padding: var(--space-xs) var(--space-sm2);
   border-radius: 4px;
 }
 
@@ -104,14 +117,14 @@ button {
   justify-content: space-around;
   align-self: end;
   justify-self: center;
-  margin-bottom: 12px;
+  margin-bottom: var(--space-md);
 }
 
 .slide-indicators .indicator {
   display: inline-block;
   background-color: var(--clr-white);
   border-radius: 50%;
-  margin-inline: 2.5px;
+  margin-inline: var(--space-xxs);
   min-height: 6px;
   height: 6px;
   min-width: 6px;
@@ -135,7 +148,7 @@ button {
   display: grid;
   grid-template-columns: 5fr 1fr;
   grid-template-rows: 0fr;
-  gap: 2px 8px;
+  gap: var(--space-xxs) var(--space-sm2);
   white-space: nowrap;
 }
 
@@ -169,6 +182,7 @@ button {
   justify-self: end;
   display: flex;
   align-items: center;
+  gap: var(--space-xs);
 }
 
 .card-beds,
@@ -190,8 +204,8 @@ button {
 .card-price {
   display: flex;
   align-items: center;
-  margin-top: 6px;
-  gap: 6px;
+  margin-top: var(--space-sm);
+  gap: var(--space-xs);
   overflow: visible;
 }
 
@@ -204,6 +218,6 @@ button {
 
 @media screen and (max-width: 1080px) {
   .container {
-    padding: 40px 40px;
+    padding: var(--space-xl2) var(--space-xxl);
   }
 }
